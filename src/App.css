@@ -1,7 +1,6 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
-@import url('https://fonts.googleapis.com');
 
 @theme {
   --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
