@@ -1,11 +1,18 @@
 import "./App.css";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import About from "./components/About";
+import GetStarted from "./components/GetStarted";
+import Pricing from "./components/Pricing";
 
 function App() {
   return (
     <>
-      <div>
-        <h1 className="text-2xl font-bold">Hello World</h1>
-      </div>
+      <Navbar></Navbar>
+      <Hero></Hero>
+      <About />
+      <GetStarted />
+      <Pricing />
     </>
   );
 }
