@@ -4,6 +4,7 @@ import Hero from "./components/Hero";
 import About from "./components/About";
 import GetStarted from "./components/GetStarted";
 import Pricing from "./components/Pricing";
+import CTASection from "./components/CTASection";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <About />
       <GetStarted />
       <Pricing />
+      <CTASection />
     </>
   );
 }

@@ -57,7 +57,7 @@ const Pricing = () => {
           Choose the plan that fits your needs.
         </p>
 
-        <div className="grid md:grid-cols-3 gap-6 mt-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
           {plans.map((plan, index) => (
             <div
               key={index}
@@ -88,7 +88,7 @@ const Pricing = () => {
               </ul>
 
               <button
-                className={`mt-6 w-full py-2 rounded-full font-medium ${
+                className={`mt-6 w-full py-2 rounded-full font-medium cursor-pointer ${
                   plan.highlighted
                     ? "bg-white text-purple-600"
                     : "text-white bg-linear-to-r from-[#6030F7] to-[#9415FA]"
