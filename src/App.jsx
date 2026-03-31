@@ -5,6 +5,7 @@ import About from "./components/About";
 import GetStarted from "./components/GetStarted";
 import Pricing from "./components/Pricing";
 import CTASection from "./components/CTASection";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <GetStarted />
       <Pricing />
       <CTASection />
+      <Footer />
     </>
   );
 }

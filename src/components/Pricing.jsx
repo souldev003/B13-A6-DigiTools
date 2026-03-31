@@ -61,7 +61,7 @@ const Pricing = () => {
           {plans.map((plan, index) => (
             <div
               key={index}
-              className={`rounded-2xl p-6 text-left relative cursor-pointer ${
+              className={`rounded-2xl p-6 text-left relative cursor-pointer flex flex-col ${
                 plan.highlighted
                   ? "bg-linear-to-r from-[#6030F7] to-[#9415FA] text-white"
                   : "bg-white shadow"
@@ -81,14 +81,14 @@ const Pricing = () => {
                 <span className="text-base"> /Month</span>
               </h1>
 
-              <ul className="mt-4 space-y-2 text-sm">
+              <ul className="my-4 space-y-2 text-sm">
                 {plan.features.map((feature, i) => (
                   <li key={i}>✔ {feature}</li>
                 ))}
               </ul>
 
               <button
-                className={`mt-6 w-full py-2 rounded-full font-medium cursor-pointer ${
+                className={`mt-auto w-full py-2 rounded-full font-medium cursor-pointer ${
                   plan.highlighted
                     ? "bg-white text-purple-600"
                     : "text-white bg-linear-to-r from-[#6030F7] to-[#9415FA]"
