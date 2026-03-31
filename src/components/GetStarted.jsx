@@ -25,7 +25,7 @@ const GetStarted = () => {
   return (
     <div className="py-24 bg-[#F9FAFC] px-4 text-center">
       <div className="mb-16">
-        <h2 className="text-5xl font-bold text-[#101727] mb-4">
+        <h2 className="text-4xl md:text-5xl font-bold text-[#101727] mb-4">
           Get Started In 3 Steps
         </h2>
         <p className="text-[#627382]">

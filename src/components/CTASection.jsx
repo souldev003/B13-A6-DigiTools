@@ -1,34 +1,39 @@
 import React from "react";
-import { GoDotFill } from "react-icons/go";
 
 const CTASection = () => {
   return (
     <div className="bg-linear-to-r from-[#6030F7] to-[#9514FA] text-white">
-      <div className="text-center max-w-300 mx-auto py-28">
-        <div className="mb-10">
-          <h1 className="text-[40px] font-extrabold mb-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 md:py-20 text-center">
+        {/* TEXT */}
+        <div className="mb-8 md:mb-12">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[42px] font-extrabold mb-4 leading-tight">
             Ready to Transform Your Workflow?
           </h1>
-          <p className="text-[#F2E9FE]">
+
+          <p className="text-[#F2E9FE] text-sm sm:text-base md:text-lg max-w-2xl mx-auto">
             Join thousands of professionals who are already using Digitools to
-            work smarter. <br /> Start your free trial today.
+            work smarter. <br className="hidden sm:block" />
+            Start your free trial today.
           </p>
         </div>
 
-        <div>
-          <div className="space-x-4 mb-4">
-            <button className="bg-white px-6 py-2.5 rounded-full border-2 border-transparent duration-400 text-[#8B5CF6] font-medium text-sm cursor-pointer hover:bg-transparent hover:text-[white] hover:border-2 hover:border-white">
-              Explore Products
-            </button>
-            <button className="border-2 border-white px-6 py-2.5 rounded-full duration-400 text-white font-medium text-sm cursor-pointer hover:text-[#8B5CF6] hover:bg-white">
-              View Pricing
-            </button>
-          </div>
-          <p className="text-sm">
-            14-day free trial <span className="mx-1"> ● </span> No credit card
-            required <span className="mx-1"> ● </span> Cancel anytime
-          </p>
+        <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-5">
+          <button className="w-full sm:w-auto bg-white px-6 py-2.5 rounded-full border-2 border-transparent text-[#8B5CF6] font-medium text-sm hover:bg-transparent hover:text-white hover:border-white transition duration-300">
+            Explore Products
+          </button>
+
+          <button className="w-full sm:w-auto border-2 border-white px-6 py-2.5 rounded-full text-white font-medium text-sm hover:text-[#8B5CF6] hover:bg-white transition duration-300">
+            View Pricing
+          </button>
         </div>
+
+        <p className="text-xs sm:text-sm text-[#E9D8FD] flex flex-wrap justify-center gap-2">
+          <span>14-day free trial</span>
+          <span className="hidden sm:inline">●</span>
+          <span>No credit card required</span>
+          <span className="hidden sm:inline">●</span>
+          <span>Cancel anytime</span>
+        </p>
       </div>
     </div>
   );
