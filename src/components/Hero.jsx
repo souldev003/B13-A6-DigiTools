@@ -23,7 +23,6 @@ const Hero = () => {
             <div className="flex text-center gap-5">
               <button className="btn btn-primary">Explore Products</button>
               <button className="flex items-center gap-2.5 btn btn-primary">
-                {" "}
                 <CiPlay1 /> Watch Demo
               </button>
             </div>
