@@ -47,18 +47,20 @@ const Footer = () => {
             </div>
           </div>
 
-          <div>
-            <h3 className="text-white text-lg font-semibold">Social Links</h3>
-            <div className="flex flex-wrap items-center gap-4 mt-5">
-              {socialIcons.map((icon, index) => (
-                <a
-                  key={index}
-                  className="bg-white w-10 h-10 flex items-center justify-center rounded-full"
-                  href="#"
-                >
-                  <img className="w-5" src={icon.img} alt={icon.alt} />
-                </a>
-              ))}
+          <div className="flex justify-center">
+            <div>
+              <h3 className="text-white text-lg font-semibold">Social Links</h3>
+              <div className="flex flex-wrap items-center gap-4 mt-5">
+                {socialIcons.map((icon, index) => (
+                  <a
+                    key={index}
+                    className="bg-white w-10 h-10 flex items-center justify-center rounded-full"
+                    href="#"
+                  >
+                    <img className="w-5" src={icon.img} alt={icon.alt} />
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
         </div>
