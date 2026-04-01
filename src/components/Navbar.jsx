@@ -1,9 +1,9 @@
 import React from "react";
 import { IoCartOutline } from "react-icons/io5";
 
-const Navbar = () => {
+const Navbar = ({ cartCount }) => {
   return (
-    <div className="shadow-sm">
+    <div className="shadow-sm z-50 bg-white sticky top-0">
       <div className="max-w-7xl mx-auto px-4">
         <div className="navbar bg-white">
           <div className="navbar-start">
@@ -54,7 +54,14 @@ const Navbar = () => {
           </div>
 
           <div className="navbar-end gap-2 sm:gap-3">
-            <IoCartOutline className="text-lg sm:text-xl cursor-pointer" />
+            <div className="relative cursor-pointer">
+              <IoCartOutline className="text-xl sm:text-2xl" />
+              {cartCount > 0 && (
+                <span className="absolute -top-2 -right-2 bg-[#6030F7] text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full">
+                  {cartCount}
+                </span>
+              )}
+            </div>
 
             <button className="hidden md:block text-gray-600 text-sm font-medium hover:text-black cursor-pointer">
               Login
