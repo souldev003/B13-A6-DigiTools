@@ -43,19 +43,8 @@ SVG & PNG Assets Icons & UI
 
 # Clone the repository
 
-git clone https://github.com/your-username/digitools.git
+git clone https://github.com/souldev003/B13-A6-DigiTools
 
-# Navigate into the project folder
-
-cd digitools
-
-# Install dependencies
-
-npm install
-
-# Start the development server
-
-npm run dev
 🌐 Live Demo
 
 👉 https://ba13-a6-by-souldev.netlify.app/
