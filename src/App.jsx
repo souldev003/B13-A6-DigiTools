@@ -8,6 +8,7 @@ import CTASection from "./components/CTASection";
 import Footer from "./components/Footer";
 import ProductsList from "./components/Products/ProductsList";
 import { Suspense, useState } from "react";
+import { ToastContainer } from "react-toastify";
 
 const getProducts = async () => {
   const res = await fetch("/productsData.json");
@@ -23,6 +24,10 @@ function App() {
         ? prev.filter((item) => item.name !== product.name)
         : [...prev, product],
     );
+  };
+
+  const clearCart = () => {
+    setCartItems([]);
   };
 
   return (
@@ -41,12 +46,15 @@ function App() {
           productsPromise={productsPromise}
           cartItems={cartItems}
           onToggleCart={toggleCart}
+          onClearCart={clearCart}
         />
       </Suspense>
       <GetStarted />
       <Pricing />
       <CTASection />
       <Footer />
+
+      <ToastContainer />
     </>
   );
 }

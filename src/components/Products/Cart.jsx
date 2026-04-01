@@ -1,7 +1,24 @@
 import React from "react";
+import { toast } from "react-toastify";
 
-const Cart = ({ cartItems, onToggleCart }) => {
+const Cart = ({ cartItems, onToggleCart, onClearCart }) => {
   const totalPrice = cartItems.reduce((total, item) => total + item.price, 0);
+
+  const handleClick = () => {
+    toast.success(`Successfully Purchased`, {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
+    console.log("hello");
+
+    onClearCart();
+  };
 
   return (
     <div className="w-full max-w-4xl mx-auto bg-white border border-gray-100 rounded-3xl p-8 shadow-sm">
@@ -37,7 +54,10 @@ const Cart = ({ cartItems, onToggleCart }) => {
         <span className="text-3xl font-bold text-[#111827]">${totalPrice}</span>
       </div>
 
-      <button className="w-full py-4 bg-[#7C3AED] hover:bg-[#6D28D9] text-white font-bold rounded-2xl transition-all duration-300 shadow-lg shadow-purple-200 active:scale-95 cursor-pointer">
+      <button
+        onClick={() => handleClick()}
+        className="w-full py-4 bg-[#7C3AED] hover:bg-[#6D28D9] text-white font-bold rounded-2xl transition-all duration-300 shadow-lg shadow-purple-200 active:scale-95 cursor-pointer"
+      >
         Proceed To Checkout
       </button>
     </div>

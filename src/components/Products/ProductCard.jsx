@@ -23,19 +23,17 @@ const ProductCard = ({ product, onToggleCart, isInCart }) => {
           </div>
         )}
 
-        <div className="w-15 h-15 rounded-full bg-white border border-[#F3F4F6] flex items-center justify-center mb-6 shadow-sm">
+        <div className="w-15 h-15 rounded-full bg-white border border-[#F3F4F6] flex items-center justify-center mb-4 shadow-sm">
           <img className="w-8" src={product.icon} alt="Icon" />
         </div>
 
-        <h2 className="text-[22px] font-bold text-[#111827] mb-2">
-          {product.name}
-        </h2>
+        <h2 className="text-[22px] font-bold text-[#111827]">{product.name}</h2>
 
-        <p className="text-[#6B7280] text-[14px] leading-[1.6] mb-6 min-h-11.25">
+        <p className="text-[#6B7280] text-[14px] leading-[1.6] mb-2 min-h-11.25">
           {product.description}
         </p>
 
-        <div className="flex items-baseline gap-1 mb-8">
+        <div className="flex items-baseline gap-1 mb-4">
           <span className="text-[28px] font-bold text-[#111827]">
             ${product.price}
           </span>
@@ -44,7 +42,7 @@ const ProductCard = ({ product, onToggleCart, isInCart }) => {
           </span>
         </div>
 
-        <div className="space-y-4 mb-10 grow">
+        <div className="space-y-4 mb-6 grow">
           {product.features.map((feature, index) => (
             <div key={index} className="flex items-center gap-3">
               <FaCheck className="text-[#22C55E] text-[14px]" />

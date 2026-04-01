@@ -3,7 +3,12 @@ import ProductCard from "./ProductCard";
 import Cart from "./Cart";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 
-const ProductsList = ({ productsPromise, cartItems, onToggleCart }) => {
+const ProductsList = ({
+  productsPromise,
+  cartItems,
+  onToggleCart,
+  onClearCart,
+}) => {
   const productsData = use(productsPromise);
   const [activeTab, setActiveTab] = useState("products");
 
@@ -64,7 +69,11 @@ const ProductsList = ({ productsPromise, cartItems, onToggleCart }) => {
                 ))}
               </div>
             ) : cartItems.length > 0 ? (
-              <Cart cartItems={cartItems} onToggleCart={onToggleCart} />
+              <Cart
+                cartItems={cartItems}
+                onClearCart={onClearCart}
+                onToggleCart={onToggleCart}
+              />
             ) : (
               <div className="flex flex-col items-center  py-20">
                 <AiOutlineShoppingCart className="text-gray-400 text-6xl mb-6" />
